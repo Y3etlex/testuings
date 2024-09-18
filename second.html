@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Markup Language</title>
+    <style>
+        .important {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <important>This text is important and should appear in green.</important>
+    </div>
+
+    <script>
+        // Script to parse and replace <important> with styled text
+        document.addEventListener('DOMContentLoaded', function() {
+            let content = document.getElementById('content');
+            let rawHTML = content.innerHTML;
+
+            // Replace <important> with a span that has the "important" class
+            let processedHTML = rawHTML.replace(/<important>(.*?)<\/important>/g, '<span class="important">$1</span>');
+
+            // Update the content with the processed HTML
+            content.innerHTML = processedHTML;
+        });
+    </script>
+</body>
+</html>
