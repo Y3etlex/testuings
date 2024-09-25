@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Etiqueta meta: Define la codificación de caracteres. En este caso, UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Etiqueta meta: Proporciona información sobre la vista de la página en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Etiqueta title: Título que aparece en la pestaña del navegador -->
+    <title>Ejemplo de Página Web</title>
+    
+    <!-- Etiqueta link: Conecta un archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Etiqueta header: Sección de encabezado de la página -->
+    <header>
+        <!-- Etiqueta h1: Título principal de la página -->
+        <h1>Bienvenidos a mi página web de ejemplo</h1>
+        
+        <!-- Etiqueta nav: Barra de navegación para enlaces -->
+        <nav>
+            <!-- Etiqueta ul: Lista desordenada para enlaces de navegación -->
+            <ul>
+                <!-- Etiqueta li: Elemento de lista -->
+                <li><a href="#seccion1">Sección 1</a></li>
+                <li><a href="#seccion2">Sección 2</a></li>
+                <li><a href="#seccion3">Sección 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Etiqueta main: Contenido principal de la página -->
+    <main>
+        <!-- Etiqueta section: Define una sección del contenido -->
+        <section id="seccion1">
+            <!-- Etiqueta h2: Subtítulo o encabezado secundario -->
+            <h2>Sección 1 - Introducción</h2>
+            
+            <!-- Etiqueta p: Párrafo de texto -->
+            <p>Esta es la primera sección de nuestra página web de ejemplo.</p>
+            
+            <!-- Etiqueta img: Imagen con atributos de fuente, texto alternativo y dimensiones -->
+            <img src="imagen1.jpg" alt="Descripción de la imagen" width="300" height="200">
+        </section>
+
+        <section id="seccion2">
+            <h2>Sección 2 - Contenido Informativo</h2>
+            
+            <!-- Etiqueta p: Otro párrafo de texto -->
+            <p>Esta es la segunda sección que contiene más información.</p>
+            
+            <!-- Etiqueta table: Tabla con datos -->
+            <table border="1">
+                <!-- Etiqueta thead: Cabezal de la tabla -->
+                <thead>
+                    <tr>
+                        <!-- Etiqueta th: Encabezado de columna en una tabla -->
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <!-- Etiqueta tbody: Cuerpo de la tabla -->
+                <tbody>
+                    <tr>
+                        <!-- Etiqueta td: Celda de datos en una tabla -->
+                        <td>Juan</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="seccion3">
+            <h2>Sección 3 - Formulario de contacto</h2>
+            
+            <!-- Etiqueta form: Formulario para entrada de datos del usuario -->
+            <form action="/enviar" method="post">
+                <!-- Etiqueta label: Etiqueta de texto para un campo de formulario -->
+                <label for="nombre">Nombre:</label>
+                <!-- Etiqueta input: Campo de entrada de texto -->
+                <input type="text" id="nombre" name="nombre">
+                <br><br>
+                
+                <label for="email">Correo electrónico:</label>
+                <!-- Etiqueta input: Campo de entrada para correos -->
+                <input type="email" id="email" name="email">
+                <br><br>
+
+                <label for="mensaje">Mensaje:</label>
+                <!-- Etiqueta textarea: Área de texto para mensajes largos -->
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <br><br>
+                
+                <!-- Etiqueta button: Botón de envío del formulario -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Etiqueta footer: Pie de página con información -->
+    <footer>
+        <p>&copy; 2024 Mi página web de ejemplo. Todos los derechos reservados.</p>
+        <!-- Etiqueta a: Enlace hacia un recurso externo -->
+        <a href="https://www.ejemplo.com">Visita nuestro sitio</a>
+    </footer>
+</body>
+</html>
+
+<!-- 
+
+<!DOCTYPE html>: Define el tipo de documento, en este caso HTML5.
+
+<html>: Raíz del documento HTML.
+
+<head>: Contiene metadatos sobre el documento como el título y enlaces a archivos externos.
+
+<meta>: Proporciona metadatos, como la codificación de caracteres y la vista del navegador.
+
+<title>: Establece el título que aparece en la pestaña del navegador.
+
+<link>: Conecta archivos externos como hojas de estilo CSS.
+
+<body>: Contiene el contenido visible de la página web.
+
+<header>: Define el encabezado de la página.
+
+<nav>: Contiene la navegación de la página.
+
+<ul> y <li>: Lista desordenada con elementos de lista.
+
+<main>: Sección principal del contenido.
+
+<section>: Define secciones específicas de contenido.
+
+<h1>, <h2>, <h3>...: Diferentes niveles de encabezados.
+
+<p>: Párrafo de texto.
+
+<img>: Inserta una imagen.
+
+<table>, <thead>, <tbody>, <tr>, <th>, <td>: Estructuran una tabla con filas y celdas.
+
+<form>, <label>, <input>, <textarea>, <button>: Formulario para introducir datos del usuario.
+
+<footer>: Define el pie de página.
+
+<a>: Crea un enlace a otra página o recurso.
+-->
