@@ -1,33 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Markup Language</title>
-    <style>
-        .important {
-            color: green;
-            font-weight: bold;
-        }
-    </style>
+    <title>Página de Pruebas HTML</title>
 </head>
 <body>
-    <div id="content">
-        <important>This text is important and should appear in green.</important>
-    </div>
 
-    <script>
-        // Script to parse and replace <important> with styled text
-        document.addEventListener('DOMContentLoaded', function() {
-            let content = document.getElementById('content');
-            let rawHTML = content.innerHTML;
+    <!-- Encabezados -->
+    <h1>Encabezado H1</h1>
+    <h2>Encabezado H2</h2>
+    <h3>Encabezado H3</h3>
+    <h4>Encabezado H4</h4>
+    <h5>Encabezado H5</h5>
+    <h6>Encabezado H6</h6>
 
-            // Replace <important> with a span that has the "important" class
-            let processedHTML = rawHTML.replace(/<important>(.*?)<\/important>/g, '<span class="important">$1</span>');
+    <!-- Párrafo -->
+    <p>Este es un párrafo de ejemplo. <strong>Texto en negrita</strong> y <em>texto en cursiva</em>.</p>
 
-            // Update the content with the processed HTML
-            content.innerHTML = processedHTML;
-        });
-    </script>
+    <!-- Imagen -->
+    <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+
+    <!-- Enlace -->
+    <a href="https://www.google.com" target="_blank">Este es un enlace a Google</a>
+
+    <!-- Lista desordenada -->
+    <ul>
+        <li>Elemento de lista 1</li>
+        <li>Elemento de lista 2</li>
+        <li>Elemento de lista 3</li>
+    </ul>
+
+    <!-- Lista ordenada -->
+    <ol>
+        <li>Elemento de lista 1</li>
+        <li>Elemento de lista 2</li>
+        <li>Elemento de lista 3</li>
+    </ol>
+
+    <!-- Tabla -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dato 1</td>
+                <td>Dato 2</td>
+            </tr>
+            <tr>
+                <td>Dato 3</td>
+                <td>Dato 4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulario -->
+    <form action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+
+        <input type="checkbox" id="acepto" name="acepto">
+        <label for="acepto">Acepto los términos</label><br><br>
+
+        <input type="radio" id="opcion1" name="opciones" value="opcion1">
+        <label for="opcion1">Opción 1</label><br>
+
+        <input type="radio" id="opcion2" name="opciones" value="opcion2">
+        <label for="opcion2">Opción 2</label><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Video -->
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <!-- Audio -->
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Etiquetas semánticas -->
+    <section>
+        <h2>Sección de Prueba</h2>
+        <p>Este es un texto dentro de una sección.</p>
+    </section>
+
+    <article>
+        <h3>Artículo de Prueba</h3>
+        <p>Este es un texto dentro de un artículo.</p>
+    </article>
+
+    <aside>
+        <h3>Barra Lateral (Aside)</h3>
+        <p>Este es un texto dentro de un aside.</p>
+    </aside>
+
+    <footer>
+        <p>Este es el pie de página.</p>
+    </footer>
+
+    <!-- Elementos interactivos -->
+    <button>Click aquí</button>
+
 </body>
 </html>
