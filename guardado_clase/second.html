@@ -4,118 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es un ejemplo completo de todos los atributos HTML existentes">
+    <meta name="keywords" content="HTML, atributos, ejemplo, aprendizaje">
+    <meta name="author" content="Tu Nombre">
     <title>Página de Pruebas HTML</title>
+    <link rel="stylesheet" href="estilos.css" media="screen">
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+    <script>
+        function alerta() { alert('Ejemplo de un script embebido en el HTML'); }
+    </script>
 </head>
-<body>
+<body onload="alerta();" onunload="alert('Adiós!');" onscroll="console.log('Scroll detectado');">
 
     <!-- Encabezados -->
-    <h1>Encabezado H1</h1>
-    <h2>Encabezado H2</h2>
-    <h3>Encabezado H3</h3>
-    <h4>Encabezado H4</h4>
-    <h5>Encabezado H5</h5>
-    <h6>Encabezado H6</h6>
+    <h1 id="encabezado1" class="titulo" style="color: blue;" title="Este es el encabezado H1" tabindex="1">Encabezado H1</h1>
+    <h2 id="encabezado2" class="titulo" style="color: green;" title="Este es el encabezado H2" draggable="true">Encabezado H2</h2>
+    <h3 id="encabezado3" class="titulo" style="color: red;" title="Este es el encabezado H3" hidden>Encabezado H3</h3>
+    <h4 id="encabezado4" class="titulo" style="color: purple;" title="Este es el encabezado H4" contenteditable="true">Encabezado H4</h4>
 
     <!-- Párrafo -->
-    <p>Este es un párrafo de ejemplo. <strong>Texto en negrita</strong> y <em>texto en cursiva</em>.</p>
+    <p id="parrafo1" class="texto" style="font-size: 16px;" title="Este es un párrafo de ejemplo" data-info="párrafo de demostración" spellcheck="true">
+        Este es un párrafo de ejemplo. <strong>Texto en negrita</strong> y <em>texto en cursiva</em>.
+    </p>
 
     <!-- Imagen -->
-    <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+    <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" id="imagen1" class="imagen" style="border: 2px solid black;" title="Imagen de ejemplo" width="150" height="150" loading="lazy" usemap="#mapa-imagen" referrerpolicy="no-referrer" decoding="async">
+
+    <map name="mapa-imagen">
+        <area shape="rect" coords="34,44,270,350" alt="Parte de la imagen" href="https://www.google.com">
+    </map>
 
     <!-- Enlace -->
-    <a href="https://www.google.com" target="_blank">Este es un enlace a Google</a>
+    <a href="https://www.google.com" target="_blank" id="enlace1" class="enlace" style="color: blue;" title="Enlace a Google" data-url="https://www.google.com" download="archivo.html" hreflang="es" ping="https://www.ejemplo.com/ping">Este es un enlace a Google</a>
 
     <!-- Lista desordenada -->
-    <ul>
-        <li>Elemento de lista 1</li>
-        <li>Elemento de lista 2</li>
-        <li>Elemento de lista 3</li>
+    <ul id="lista1" class="lista-desordenada" style="list-style-type: square;" title="Lista desordenada" reversed start="3" type="a">
+        <li data-item="1">Elemento de lista 1</li>
+        <li data-item="2">Elemento de lista 2</li>
+        <li data-item="3">Elemento de lista 3</li>
     </ul>
 
     <!-- Lista ordenada -->
-    <ol>
-        <li>Elemento de lista 1</li>
-        <li>Elemento de lista 2</li>
-        <li>Elemento de lista 3</li>
+    <ol id="lista2" class="lista-ordenada" style="list-style-type: decimal;" title="Lista ordenada">
+        <li data-item="1">Elemento de lista 1</li>
+        <li data-item="2">Elemento de lista 2</li>
+        <li data-item="3">Elemento de lista 3</li>
     </ol>
 
     <!-- Tabla -->
-    <table border="1">
+    <table border="1" id="tabla1" class="tabla" style="border-collapse: collapse;" title="Tabla de ejemplo" summary="Tabla con dos columnas y varias filas" cellpadding="5" cellspacing="2">
         <thead>
             <tr>
-                <th>Columna 1</th>
-                <th>Columna 2</th>
+                <th scope="col" abbr="Col1">Columna 1</th>
+                <th scope="col" abbr="Col2">Columna 2</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Dato 1</td>
-                <td>Dato 2</td>
+                <td headers="Col1">Dato 1</td>
+                <td headers="Col2">Dato 2</td>
             </tr>
             <tr>
-                <td>Dato 3</td>
-                <td>Dato 4</td>
+                <td headers="Col1">Dato 3</td>
+                <td headers="Col2">Dato 4</td>
             </tr>
         </tbody>
     </table>
 
     <!-- Formulario -->
-    <form action="#" method="POST">
+    <form action="#" method="POST" id="formulario1" class="formulario" enctype="multipart/form-data" title="Formulario de ejemplo" novalidate autocomplete="on" target="_self">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre"><br><br>
+        <input type="text" id="nombre" name="nombre" value="John Doe" autocomplete="on" required pattern="[A-Za-z]+" placeholder="Ingrese su nombre" size="30" maxlength="50" aria-label="Nombre Completo"><br><br>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
+        <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required multiple><br><br>
 
         <label for="comentarios">Comentarios:</label><br>
-        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="200" placeholder="Escriba sus comentarios" wrap="soft" aria-required="true"></textarea><br><br>
 
-        <input type="checkbox" id="acepto" name="acepto">
+        <input type="checkbox" id="acepto" name="acepto" checked>
         <label for="acepto">Acepto los términos</label><br><br>
 
-        <input type="radio" id="opcion1" name="opciones" value="opcion1">
+        <input type="radio" id="opcion1" name="opciones" value="opcion1" checked>
         <label for="opcion1">Opción 1</label><br>
 
         <input type="radio" id="opcion2" name="opciones" value="opcion2">
         <label for="opcion2">Opción 2</label><br><br>
 
+        <input type="color" name="color" value="#ff0000"><br><br>
+
+        <input type="date" name="fecha" value="2023-01-01"><br><br>
+
+        <input type="file" name="archivo" accept=".jpg,.png"><br><br>
+
         <input type="submit" value="Enviar">
     </form>
 
     <!-- Video -->
-    <video width="320" height="240" controls>
+    <video width="320" height="240" controls autoplay muted loop id="video1" class="video" title="Video de prueba" poster="poster.jpg" preload="auto" playsinline>
         <source src="movie.mp4" type="video/mp4">
         Tu navegador no soporta el elemento de video.
     </video>
 
     <!-- Audio -->
-    <audio controls>
+    <audio controls autoplay loop id="audio1" class="audio" title="Audio de prueba" preload="metadata">
         <source src="audio.mp3" type="audio/mpeg">
         Tu navegador no soporta el elemento de audio.
     </audio>
 
     <!-- Etiquetas semánticas -->
-    <section>
+    <section id="seccion1" class="seccion" style="background-color: lightgray;" title="Sección de prueba" lang="es" role="region">
         <h2>Sección de Prueba</h2>
         <p>Este es un texto dentro de una sección.</p>
     </section>
 
-    <article>
+    <article id="articulo1" class="articulo" style="border: 1px solid black;" title="Artículo de prueba" role="article" aria-live="polite">
         <h3>Artículo de Prueba</h3>
         <p>Este es un texto dentro de un artículo.</p>
     </article>
 
-    <aside>
+    <aside id="aside1" class="aside" style="background-color: lightblue;" title="Barra lateral (Aside)" role="complementary">
         <h3>Barra Lateral (Aside)</h3>
         <p>Este es un texto dentro de un aside.</p>
     </aside>
 
-    <footer>
+    <footer id="footer1" class="footer" style="background-color: lightcoral;" title="Pie de página" role="contentinfo">
         <p>Este es el pie de página.</p>
     </footer>
 
     <!-- Elementos interactivos -->
-    <button>Click aquí</button>
+    <button id="boton1" class="boton" style="background-color: yellow;" onclick="alert('Has hecho clic en el botón');" title="Botón de prueba" type="button" accesskey="b">Click aquí</button>
 
 </body>
 </html>
